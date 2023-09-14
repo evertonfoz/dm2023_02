@@ -1,0 +1,9 @@
+POST http://10.55.0.4:4001/product_categories
+Content-Type: application/json
+
+{
+    "productCategoryID": 1,
+    "name": "Beverages",
+    "description": "Soft drinks, coffees, teas, beers, and ales",
+    "imageURL": "https://i.imgur.com/0jVX1fM.png"
+}

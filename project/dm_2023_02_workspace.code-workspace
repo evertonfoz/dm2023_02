@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "mobile"
+		},
+		{
+			"path": "backend"
+		},
+		{
+			"path": "common"
+		}
+	],
+	"settings": {}
+}
