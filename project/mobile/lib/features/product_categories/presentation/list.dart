@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
         title: Text(widget.title),
       ),
       body: FutureBuilder<List<ProductCategoryModel>>(
-        future: ProductCategoryDataSource().fetchProductCategories(),
+        future: ProductCategoryDataSource().getAllProductCategories(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -41,6 +41,14 @@ class _HomePageState extends State<HomePage> {
             return const Center(child: Text('No data'));
           }
         },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          await Navigator.pushNamed(context, '/productCategoryCRUD');
+          setState(() {});
+        },
+        tooltip: 'Novo tipo de produto',
+        child: const Icon(Icons.add),
       ),
     );
   }

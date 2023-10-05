@@ -9,5 +9,6 @@ class ProductResource extends Resource {
   @override
   List<Route> get routes => [
         Route.get('/product_categories', getAllProductCategories),
+        Route.post('/product_categories', postProductCategory),
       ];
 }
